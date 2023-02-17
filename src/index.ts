@@ -1,6 +1,13 @@
 import express, { Application } from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import session from "express-session";
+
+declare module "express-session" {
+  interface Session {
+    userId: string;
+  }
+}
 
 dotenv.config();
 
