@@ -8,6 +8,8 @@ Content-Type: application/json
 }
 
 201 Created
+Content-Type: application/json
+
 {
   "id": "1"
 }
@@ -47,4 +49,41 @@ Content-Type: application/json
 DELETE /notes/1
 
 204 No Content
+```
+```
+POST /auth/register
+Content-Type: application/json
+
+{
+  "name": "user", 
+  "email": "user@example.com", 
+  "password": "abc123"
+}
+
+201 Created
+Content-Type: application/json
+
+{
+  "id": "1"
+}
+```
+```
+POST /auth/login
+Content-Type: application/json
+
+{
+  "email": "user@example.com", 
+  "password": "abc123"
+}
+
+200 OK
+Content-Type: application/json
+
+{
+  "id": "1"
+}
+```
+```
+GET /auth/logout
+
 ```
